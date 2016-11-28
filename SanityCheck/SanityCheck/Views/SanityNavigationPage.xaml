@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<NavigationPage x:Class="SanityCheck.Views.SanityNavigationPage"
+                xmlns="http://xamarin.com/schemas/2014/forms"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+                prism:ViewModelLocator.AutowireViewModel="True">
+    <NavigationPage.ToolbarItems>
+        <ToolbarItem Command="{Binding NavigateCommand}"
+                     CommandParameter="MainPage"
+                     Text="Home" />
+        <ToolbarItem Command="{Binding NavigateCommand}"
+                     CommandParameter="ChartPage"
+                     Text="Chart" />
+        <ToolbarItem Command="{Binding NavigateCommand}"
+                     CommandParameter="ListPage"
+                     Text="List" />
+    </NavigationPage.ToolbarItems>
+</NavigationPage>
