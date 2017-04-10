@@ -8,10 +8,9 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
-using HLI.Forms.Models;
-
 using Prism.Unity;
 
+using SanityCheck.Models;
 using SanityCheck.Views;
 
 namespace SanityCheck

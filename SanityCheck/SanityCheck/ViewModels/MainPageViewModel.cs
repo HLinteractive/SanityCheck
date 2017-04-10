@@ -1,6 +1,6 @@
 ﻿// // --------------------------------------------------------------------------------------------------------------------
 // // <copyright file="SanityCheck.MainPageViewModel.cs" company="HL Interactive">
-// //   Copyright © HL Interactive, Stockholm, Sweden, 2016
+// //   Copyright © HL Interactive, Stockholm, Sweden, 2017
 // // </copyright>
 // // --------------------------------------------------------------------------------------------------------------------
 
@@ -51,6 +51,14 @@ namespace SanityCheck.ViewModels
                 this.Title = "Sanity Check: XF" + prismSyncfusion;
             }
         }
+
+        #region Implementation of INavigatingAware
+
+        public void OnNavigatingTo(NavigationParameters parameters)
+        {
+        }
+
+        #endregion
 
         #endregion
     }

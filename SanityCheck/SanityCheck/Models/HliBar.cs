@@ -6,9 +6,11 @@
 
 using System;
 
-namespace HLI.Forms.Models
+using HLI.Core.Models;
+
+namespace SanityCheck.Models
 {
-    public class HliBar
+    public class HliBar : ModelBase
     {
         #region Public Properties
 
