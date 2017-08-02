@@ -1,6 +1,6 @@
 ﻿// // --------------------------------------------------------------------------------------------------------------------
-// // <copyright file="SanityCheck.App.xaml.cs" company="HL Interactive">
-// //   Copyright © HL Interactive, Stockholm, Sweden, 2016
+// // <copyright file="SanityCheck.Forms.App.xaml.cs" company="HL Interactive">
+// //   Copyright © HL Interactive, Stockholm, Sweden, 2017
 // // </copyright>
 // // --------------------------------------------------------------------------------------------------------------------
 
@@ -8,14 +8,16 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
+using HLI.Forms.Prism.Extensions;
+
 using Prism.Unity;
 
-using SanityCheck.Models;
-using SanityCheck.Views;
+using SanityCheck.Forms.Models;
+using SanityCheck.Forms.Pages;
 
-namespace SanityCheck
+namespace SanityCheck.Forms
 {
-    public partial class App : PrismApplication
+    public partial class App
     {
         #region Constructors and Destructors
 
@@ -26,9 +28,19 @@ namespace SanityCheck
 
         #endregion
 
+        #region Public Properties
+
         public IEnumerable<HliBar> HliBars { get; private set; }
 
+        #endregion
+
         #region Methods
+
+        protected override void ConfigureViewModelLocator()
+        {
+            base.ConfigureViewModelLocator();
+            this.SetViewModelNamingPolicy();
+        }
 
         protected override void OnInitialized()
         {

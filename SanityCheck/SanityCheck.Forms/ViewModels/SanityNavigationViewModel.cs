@@ -11,9 +11,9 @@ using Prism.Navigation;
 
 using Xamarin.Forms;
 
-namespace SanityCheck.ViewModels
+namespace SanityCheck.Forms.ViewModels
 {
-    public class SanityNavigationPageViewModel : BindableBase
+    public class SanityNavigationViewModel : BindableBase
     {
         #region Fields
 
@@ -23,7 +23,7 @@ namespace SanityCheck.ViewModels
 
         #region Constructors and Destructors
 
-        public SanityNavigationPageViewModel(INavigationService navigationService)
+        public SanityNavigationViewModel(INavigationService navigationService)
         {
             this.navigationService = navigationService;
             this.NavigateCommand = new Command<string>(this.OnNavigate);

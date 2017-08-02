@@ -1,14 +1,14 @@
 ﻿// // --------------------------------------------------------------------------------------------------------------------
-// // <copyright file="SanityCheck.ListPageViewModel.cs" company="HL Interactive">
+// // <copyright file="SanityCheck.ChartPageViewModel.cs" company="HL Interactive">
 // //   Copyright © HL Interactive, Stockholm, Sweden, 2016
 // // </copyright>
 // // --------------------------------------------------------------------------------------------------------------------
 
 using Prism.Mvvm;
 
-namespace SanityCheck.ViewModels
+namespace SanityCheck.Forms.ViewModels
 {
-    public class ListPageViewModel : BindableBase
+    public class ChartViewModel : BindableBase
     {
         #region Public Properties
 

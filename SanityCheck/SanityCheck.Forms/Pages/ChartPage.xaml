@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<ContentPage x:Class="SanityCheck.Forms.Pages.ChartPage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:hli="clr-namespace:HLI.Forms.Core.Controls;assembly=HLI.Forms.Core"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             xmlns:xForms="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             Padding="10">
+
+    <StackLayout>
+        <Label FontAttributes="Bold"
+               FontSize="22"
+               Text="Chart Page"
+               TextColor="Purple" />
+        <ScrollView HeightRequest="400">
+            <hli:HliBarChart ItemsSource="{Binding Application.HliBars,
+                                                        Mode=OneWay}" ValuePath="Duration" LabelPath="Title" IsPercent="True" BarScale="2" />
+        </ScrollView>
+    </StackLayout>
+
+</ContentPage>

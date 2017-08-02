@@ -8,7 +8,7 @@ using System;
 
 using HLI.Core.Models;
 
-namespace SanityCheck.Models
+namespace SanityCheck.Forms.Models
 {
     public class HliBar : ModelBase
     {

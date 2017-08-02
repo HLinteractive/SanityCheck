@@ -1,18 +1,19 @@
 ﻿// // --------------------------------------------------------------------------------------------------------------------
-// // <copyright file="SanityCheck.ChartPageViewModel.cs" company="HL Interactive">
+// // <copyright file="SanityCheck.ListPage.xaml.cs" company="HL Interactive">
 // //   Copyright © HL Interactive, Stockholm, Sweden, 2016
 // // </copyright>
 // // --------------------------------------------------------------------------------------------------------------------
 
-using Prism.Mvvm;
-
-namespace SanityCheck.ViewModels
+namespace SanityCheck.Forms.Pages
 {
-    public class ChartPageViewModel : BindableBase
+    public partial class ListPage
     {
-        #region Public Properties
+        #region Constructors and Destructors
 
-        public App Application => Xamarin.Forms.Application.Current as App;
+        public ListPage()
+        {
+            this.InitializeComponent();
+        }
 
         #endregion
     }

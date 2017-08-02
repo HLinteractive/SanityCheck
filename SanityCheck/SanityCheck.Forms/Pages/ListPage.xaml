@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<pages:PrismContentPage
+    x:Class="SanityCheck.Forms.Pages.ListPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:hli="clr-namespace:HLI.Forms.Core.Controls;assembly=HLI.Forms.Core"
+    xmlns:pages="clr-namespace:HLI.Forms.Prism.Pages;assembly=HLI.Forms.Prism"
+    xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+    xmlns:styles="clr-namespace:HLI.Forms.Styles;assembly=SanityCheck"
+    Padding="10">
+    <StackLayout>
+        <Label
+            FontAttributes="Bold"
+            FontSize="22"
+            Text="List Page"
+            TextColor="Green" />
+
+        <hli:HliItemsView ItemsSource="{Binding Application.HliBars}">
+            <hli:HliItemsView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Label
+                            FontAttributes="Bold"
+                            Text="Title"
+                            TextColor="Green" />
+                        <Label Text="{Binding Title}" />
+                        <Label
+                            FontAttributes="Bold"
+                            Text="Quantity"
+                            TextColor="Green" />
+                        <Label Text="{Binding Quantity}" />
+                        <Label
+                            FontAttributes="Bold"
+                            Text="Type"
+                            TextColor="Green" />
+                        <Label Text="{Binding TimeLogType}" />
+                    </StackLayout>
+                </DataTemplate>
+            </hli:HliItemsView.ItemTemplate>
+        </hli:HliItemsView>
+
+    </StackLayout>
+
+</pages:PrismContentPage>

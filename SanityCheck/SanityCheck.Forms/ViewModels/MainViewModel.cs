@@ -7,9 +7,9 @@
 using Prism.Mvvm;
 using Prism.Navigation;
 
-namespace SanityCheck.ViewModels
+namespace SanityCheck.Forms.ViewModels
 {
-    public class MainPageViewModel : BindableBase, INavigationAware
+    public class MainViewModel : BindableBase, INavigationAware
     {
         #region Fields
 
@@ -21,14 +21,8 @@ namespace SanityCheck.ViewModels
 
         public string Title
         {
-            get
-            {
-                return this.title;
-            }
-            set
-            {
-                this.SetProperty(ref this.title, value);
-            }
+            get => this.title;
+            set => this.SetProperty(ref this.title, value);
         }
 
         #endregion
@@ -41,24 +35,20 @@ namespace SanityCheck.ViewModels
 
         public void OnNavigatedTo(NavigationParameters parameters)
         {
-            var prismSyncfusion = " + Prism + SyncFusion ";
+            var newTitle = "Xamarin + Prism + HLi ";
             if (parameters.ContainsKey("title"))
             {
-                this.Title = (string)parameters["title"] + prismSyncfusion;
+                this.Title = (string)parameters["title"] + " " + newTitle;
             }
             else
             {
-                this.Title = "Sanity Check: XF" + prismSyncfusion;
+                this.Title = $"Sanity Check: {newTitle}";
             }
         }
-
-        #region Implementation of INavigatingAware
 
         public void OnNavigatingTo(NavigationParameters parameters)
         {
         }
-
-        #endregion
 
         #endregion
     }

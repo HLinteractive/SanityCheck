@@ -1,0 +1,59 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.4</TargetFramework>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <PackageTargetFallback>portable-net45+win8+wpa81+wp8</PackageTargetFallback>
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+    
+  <ItemGroup>
+    <EmbeddedResource Include="App.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\ChartPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\ListPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\MainPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\SanityNavigationPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Compile Update="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\MainPage.xaml.cs">
+      <DependentUpon>Views\MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\ChartPage.xaml.cs">
+      <DependentUpon>Views\ChartPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\ListPage.xaml.cs">
+      <DependentUpon>Views\ListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\SanityNavigationPage.xaml.cs">
+      <DependentUpon>Views\SanityNavigationPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="HLI.Core" Version="1.0.6-beta" />
+    <PackageReference Include="HLI.Forms.Core" Version="1.0.1-rc" />
+    <PackageReference Include="HLI.Forms.Prism" Version="1.0.0-beta" />
+    <PackageReference Include="HLI.Globalization" Version="1.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+    <PackageReference Include="Prism.Core" Version="6.3.0" />
+    <PackageReference Include="Prism.Forms" Version="6.3.0" />
+    <PackageReference Include="Prism.Unity.Forms" Version="6.3.0" />
+    <PackageReference Include="Unity" Version="4.0.1" />
+    <PackageReference Include="Xamarin.Forms" Version="2.3.4.247" />
+  </ItemGroup>
+
+</Project>
